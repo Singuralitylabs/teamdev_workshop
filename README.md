@@ -17,6 +17,9 @@ python3 -m http.server 8000
 | ファイル | 役割 |
 | --- | --- |
 | `index.html` | ヘッダー、トップページ、サービス紹介、コース紹介、お問い合わせ、フッターの構造と文章 |
+| `web-design.html` | Webデザイン入門コース詳細ページのひな形 |
+| `javascript-practice.html` | JavaScript実践コース詳細ページのひな形 |
+| `frontend-development.html` | フロントエンド開発コース詳細ページのひな形 |
 | `styles.css` | 色・文字・コンポーネントのスタイル、レスポンシブレイアウト、簡易イラスト |
 | `script.js` | スマートフォン用ナビゲーションとサンプルお問い合わせフォームの動作 |
 | `README.md` | サイトの概要、起動方法、ファイル構成 |
