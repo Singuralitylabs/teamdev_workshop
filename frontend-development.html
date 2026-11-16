@@ -3,9 +3,205 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Code Canvasのフロントエンド開発コース詳細。ReactとTypeScriptを使い、段階的なカリキュラムで本格的なWebアプリケーション開発を学びます。">
+  <meta name="theme-color" content="#f7f8fc">
   <title>フロントエンド開発 | Code Canvas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- ワークショップ受講者がページ内容を作成してください。 -->
+  <a class="skip-link" href="#main">コンテンツへスキップ</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Code Canvas ホーム">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span>code<span class="brand-light">canvas</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="メニューを開く">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="primary-nav" aria-label="メインナビゲーション">
+        <a href="#target">受講対象</a>
+        <a href="#curriculum">カリキュラム</a>
+        <a href="#projects">作れるもの</a>
+        <a href="index.html#courses">コース一覧</a>
+        <a class="button button-small nav-cta" href="index.html#contact">無料で始める <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero course-hero" id="overview" aria-labelledby="course-hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <a class="back-link" href="index.html#courses"><span aria-hidden="true">←</span> コース一覧へ戻る</a>
+          <p class="eyebrow"><span class="eyebrow-dot dot-mint"></span> INTERMEDIATE COURSE · 12 WEEKS</p>
+          <h1 id="course-hero-title"><span>フロントエンド</span><span>開発</span></h1>
+          <p class="hero-lead">ReactとTypeScriptを基礎から実践まで段階的に習得。<br>コンポーネント設計や状態管理、API連携を身につけ、<br>本格的なWebアプリをつくり上げる12週間のコースです。</p>
+          <div class="course-tags hero-tags" aria-label="学習する主な技術"><span>React</span><span>TypeScript</span><span>Custom Hooks</span><span>REST API</span><span>アプリ開発</span></div>
+          <div class="hero-actions">
+            <a class="button" href="#curriculum">カリキュラムを見る <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="index.html#contact">無料体験・受講相談 <span aria-hidden="true">↗</span></a>
+          </div>
+          <dl class="course-meta-list">
+            <div><dt>学習期間</dt><dd>約 12 週間（週 6〜8 時間）</dd></div>
+            <div><dt>難易度</dt><dd>中級（HTML / JS基礎修了）</dd></div>
+            <div><dt>サポート</dt><dd>メンター面談・コード添削</dd></div>
+          </dl>
+        </div>
+        <div class="hero-art course-hero-art" aria-label="ReactとTypeScriptでコンポーネントを組み立てる様子を表したイラスト" role="img">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="floating-tag tag-html"><span class="tag-icon blue">✳</span><span>React 19</span></div>
+          <div class="floating-tag tag-js"><span class="tag-icon mint">TS</span><span>TypeScript</span></div>
+          <div class="floating-tag tag-react"><span class="tag-icon yellow">⚡</span><span>Web App</span></div>
+          <div class="editor-card">
+            <div class="editor-top"><div class="editor-dots"><i></i><i></i><i></i></div><span>TaskBoard.tsx</span><span class="editor-menu">···</span></div>
+            <div class="editor-body" aria-hidden="true">
+              <div><b>01</b><code><span class="code-purple">type</span> <span class="code-blue">Task</span> = { id: <span class="code-green">string</span>; done: <span class="code-green">boolean</span> };</code></div>
+              <div><b>02</b><code></code></div>
+              <div><b>03</b><code><span class="code-purple">export function</span> <span class="code-green">App</span>() {</code></div>
+              <div><b>04</b><code>&nbsp;&nbsp;<span class="code-purple">const</span> [tasks] = <span class="code-green">useState</span>&lt;<span class="code-blue">Task</span>[]&gt;([]);</code></div>
+              <div><b>05</b><code>&nbsp;&nbsp;<span class="code-purple">return</span> &lt;<span class="code-blue">Board</span> <span class="code-yellow">items</span>={tasks} /&gt;;</code></div>
+              <div><b>06</b><code>}</code></div>
+            </div>
+            <div class="editor-output"><span class="output-label">TYPE CHECK</span><span>0 errors · Ready to ship<span class="sparkle">✦</span></span></div>
+          </div>
+          <span class="art-spark spark-a">✦</span><span class="art-spark spark-b">✳</span>
+          <div class="art-note"><span>✦</span> COMPONENT-DRIVEN DEVELOPMENT</div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>SCROLL TO CURRICULUM</span><span class="scroll-line"></span><span>COURSE 03</span></div>
+    </section>
+
+    <section class="section about-section" id="target" aria-labelledby="target-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">WHO THIS COURSE IS FOR</p>
+            <h2 id="target-title">基礎の先へ進みたい、<br class="mobile-break">あなたのために。</h2>
+          </div>
+          <p class="section-intro">静的なページ制作から一歩踏み出し、<br>コンポーネント設計や型安全な開発へ。<br>実務で通用する確かな力を身につけます。</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-number">01</span><div class="feature-icon icon-green" aria-hidden="true">⌘</div><h3>HTML / CSS・JSの基礎を終えた方</h3><p>Webページのマークアップや基本的なDOM操作・イベント処理をひと通り学び、次は本格的なWebアプリ開発に挑戦したい方に最適です。</p><span class="feature-arrow" aria-hidden="true">↗</span></article>
+          <article class="feature-card"><span class="feature-number">02</span><div class="feature-icon icon-yellow" aria-hidden="true">✳</div><h3>Reactを体系的に身につけたい方</h3><p>独学でチュートリアルに触れたものの、コンポーネントの分け方やState・Hooksの使いどころで悩んだ経験がある方をしっかり導きます。</p><span class="feature-arrow" aria-hidden="true">↗</span></article>
+          <article class="feature-card"><span class="feature-number">03</span><div class="feature-icon icon-pink" aria-hidden="true">◌</div><h3>TypeScriptで安全に開発したい方</h3><p>PropsやAPIレスポンスに型を定義し、エディタの補完を活かしながらバグを未然に防ぐモダンな開発スタイルを実践形式で習得できます。</p><span class="feature-arrow" aria-hidden="true">↗</span></article>
+        </div>
+        <div class="prereq-box" role="note" aria-label="受講前の目安スキル">
+          <span class="prereq-badge">PREREQUISITE</span>
+          <p><strong>受講前の目安：</strong>HTML / CSSでの基本的なレイアウト作成と、JavaScriptの変数・関数・配列・条件分岐の基礎知識があるとスムーズに学習を始められます（不安な方は「JavaScript実践」コースからのステップアップもおすすめです）。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section courses-section" id="curriculum" aria-labelledby="curriculum-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">STEP-BY-STEP CURRICULUM</p>
+            <h2 id="curriculum-title">12週間で身につける、<br class="mobile-break">4つのステップ。</h2>
+          </div>
+          <p class="section-intro">JavaScriptの整理からスタートし、<br>小さな実践課題を積み重ねながら、<br>ReactとTypeScriptを習得します。</p>
+        </div>
+        <ol class="curriculum-list">
+          <li class="curriculum-item">
+            <div class="curriculum-meta"><span class="curriculum-step">STEP 01</span><span class="curriculum-weeks">⏱ Week 1 – 3</span></div>
+            <div class="curriculum-body">
+              <h3>モダンJavaScriptとReactの基礎</h3>
+              <p>分割代入・スプレッド構文・配列メソッド（<code>map</code> / <code>filter</code>）などReact開発に欠かせないJavaScript文法を整理。JSXの書き方、再利用しやすいコンポーネント分割、<code>props</code> と <code>useState</code> を使ったインタラクティブなUI構築を学びます。</p>
+              <div class="course-tags"><span>ES Modules</span><span>JSX</span><span>コンポーネント分割</span><span>Props</span><span>useState</span></div>
+            </div>
+          </li>
+          <li class="curriculum-item">
+            <div class="curriculum-meta"><span class="curriculum-step">STEP 02</span><span class="curriculum-weeks">⏱ Week 4 – 6</span></div>
+            <div class="curriculum-body">
+              <h3>TypeScript導入と型安全なUI設計</h3>
+              <p>プリミティブ型・オブジェクト型・ユニオン型・ジェネリクスの基礎から、ReactコンポーネントのPropsやイベントハンドラ、<code>useState</code> の型定義までを実践。型エラーを読み解き、変更に強いコンポーネントを設計する力を養います。</p>
+              <div class="course-tags"><span>TypeScript基礎</span><span>Type / Interface</span><span>Union Types</span><span>イベント型定義</span><span>型安全なState</span></div>
+            </div>
+          </li>
+          <li class="curriculum-item">
+            <div class="curriculum-meta"><span class="curriculum-step">STEP 03</span><span class="curriculum-weeks">⏱ Week 7 – 9</span></div>
+            <div class="curriculum-body">
+              <h3>非同期通信・カスタムフックと状態管理</h3>
+              <p><code>useEffect</code> を用いたライフサイクル制御や外部Web APIからのデータ取得（<code>fetch</code> / <code>async・await</code>）、ローディング・エラー状態のUI表現を実装。さらにカスタムフックでロジックを切り出し、複数画面・複数コンポーネント間の状態共有を整理します。</p>
+              <div class="course-tags"><span>useEffect</span><span>REST API連携</span><span>Custom Hooks</span><span>フォーム制御</span><span>Context / 状態管理</span></div>
+            </div>
+          </li>
+          <li class="curriculum-item">
+            <div class="curriculum-meta"><span class="curriculum-step">STEP 04</span><span class="curriculum-weeks">⏱ Week 10 – 12</span></div>
+            <div class="curriculum-body">
+              <h3>実践Webアプリ開発・品質改善・公開</h3>
+              <p>3つのステップで培ったReact + TypeScriptの技術を統合し、オリジナルWebアプリケーションを設計から実装。キーボード操作などのアクセシビリティ配慮、レンダリング最適化、本番ビルドとホスティングサービスへのデプロイまでを完走します。</p>
+              <div class="course-tags"><span>アプリ設計</span><span>アクセシビリティ</span><span>パフォーマンス最適化</span><span>本番ビルド</span><span>デプロイ公開</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section about-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">WHAT YOU WILL BUILD</p>
+            <h2 id="projects-title">学んだ技術で、<br class="mobile-break">ここまでつくれる。</h2>
+          </div>
+          <p class="section-intro">インプットだけで終わらせない。<br>カリキュラムの節目ごとに手を動かし、<br>3つのWebアプリを完成させます。</p>
+        </div>
+        <div class="course-grid">
+          <article class="course-card course-lavender">
+            <div class="course-topline"><span class="course-level">PROJECT 01</span><span class="course-time">Week 4 – 6 制作</span></div>
+            <div class="course-visual visual-web"><span class="visual-window"><i></i><i></i><i></i><b>&lt;TaskBoard /&gt;</b></span><span class="visual-shape shape-circle"></span><span class="visual-shape shape-square"></span></div>
+            <div class="course-content">
+              <div class="course-tags"><span>React</span><span>TypeScript</span><span>LocalStorage</span></div>
+              <h3>タスク管理ボードアプリ</h3>
+              <p>ステータス別の絞り込みや優先度ラベル、キーボード操作に対応したタスク管理アプリ。PropsとStateの型定義やコンポーネント分割の基礎を実践します。</p>
+              <a href="#curriculum" class="course-link">STEP 02 で制作 <span aria-hidden="true">↑</span></a>
+            </div>
+          </article>
+          <article class="course-card course-peach">
+            <div class="course-topline"><span class="course-level">PROJECT 02</span><span class="course-time">Week 7 – 9 制作</span></div>
+            <div class="course-visual visual-js"><span class="js-tile">API</span><span class="visual-orbit"></span><span class="js-spark">✳</span><span class="js-label">realtime<br>data</span></div>
+            <div class="course-content">
+              <div class="course-tags"><span>REST API</span><span>Custom Hooks</span><span>非同期処理</span></div>
+              <h3>API連携情報ダッシュボード</h3>
+              <p>キーワード検索やお気に入り保存機能を備えた情報ダッシュボード。非同期データの型付けやローディング・エラー時の親切なUI設計を身につけます。</p>
+              <a href="#curriculum" class="course-link">STEP 03 で制作 <span aria-hidden="true">↑</span></a>
+            </div>
+          </article>
+          <article class="course-card course-mint">
+            <div class="course-topline"><span class="course-level">PROJECT 03</span><span class="course-time">Week 10 – 12 制作</span></div>
+            <div class="course-visual visual-app"><div class="app-phone"><span class="phone-notch"></span><span class="phone-greeting">Good morning,<br><b>Creator.</b></span><span class="phone-card"></span><span class="phone-nav"><i></i><i></i><i></i></span></div><span class="app-spark">✦</span></div>
+            <div class="course-content">
+              <div class="course-tags"><span>React</span><span>TypeScript</span><span>ポートフォリオ</span></div>
+              <h3>オリジナルWebアプリ開発</h3>
+              <p>読書記録アプリや学習ログノートなど、自分のアイデアを形にする総合課題。メンターのコードレビューを受けながら世界に公開できる作品を完成させます。</p>
+              <a href="#curriculum" class="course-link">STEP 04 で制作 <span aria-hidden="true">↑</span></a>
+            </div>
+          </article>
+        </div>
+        <p class="course-note">完成した作品はGitHubリポジトリと公開URLにまとめ、ご自身のポートフォリオとして活用できます。</p>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <div>
+          <p class="eyebrow">START BUILDING WITH REACT &amp; TS</p>
+          <h2 id="cta-title">Webアプリ開発の一歩を、<br>ここから始めよう。</h2>
+          <p>現在のスキルに合わせた学習プランのご相談や、無料体験レッスンのご案内も受け付けています。</p>
+          <div class="cta-sublinks"><a href="web-design.html">Webデザイン入門を見る →</a><a href="javascript-practice.html">JavaScript実践を見る →</a></div>
+        </div>
+        <a href="index.html#contact" class="button button-light">無料体験・相談を申し込む <span aria-hidden="true">↗</span></a>
+        <span class="cta-decoration" aria-hidden="true">✦</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>code<span class="brand-light">canvas</span></span></a><p>Make something meaningful.</p><a href="#overview" class="back-top">BACK TO TOP ↑</a></div><div class="container footer-bottom"><span>© 2026 Code Canvas</span><span>Learning by making, every day.</span></div></footer>
 </body>
 </html>
